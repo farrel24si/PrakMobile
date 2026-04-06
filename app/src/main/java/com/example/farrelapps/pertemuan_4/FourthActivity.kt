@@ -1,42 +1,37 @@
-package com.example.farrelapps
+package com.example.farrelapps.pertemuan_4
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.farrelapps.MainActivity
+import com.example.farrelapps.R
 import com.example.farrelapps.databinding.ActivityFourthBinding
-import com.example.farrelapps.databinding.ActivityMainBinding
+import com.example.farrelapps.databinding.ActivityThirdBinding
 import com.example.farrelapps.pertemuan_3.ThirdResultActivity
-import com.example.farrelapps.pertemuan_4.FourthActivity
 
-class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
+class FourthActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityFourthBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityFourthBinding.inflate(layoutInflater)
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        binding.btntofourth.setOnClickListener {
-            val intent = Intent(this, FourthActivity::class.java)
-            startActivity(intent)
-
-//            val intent = Intent(this, FourthActivity::class.java)
-
-            /*tambahkan bagian berikut*/
-            intent.putExtra("name", "Politeknik Caltex Riau")
-            intent.putExtra("from", "Rumbai")
-            intent.putExtra("age", 25)
-
+        binding.btntomain.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
+        val name = intent.getStringExtra("name")
+        val from = intent.getStringExtra("from")
+        val age = intent.getIntExtra("age",0)
+        Log.i("Data Intent","Nama: $name , Usia: $age, Asal: $from")
     }
 }
