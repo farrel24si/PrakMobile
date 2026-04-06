@@ -37,6 +37,7 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("age", 25)
 
             startActivity(intent)
+            finish() // Activity lama dihapus dari stack
         }
     }
 }
