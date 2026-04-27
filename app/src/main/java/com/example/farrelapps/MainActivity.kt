@@ -13,6 +13,7 @@ import com.example.farrelapps.databinding.ActivityFourthBinding
 import com.example.farrelapps.databinding.ActivityMainBinding
 import com.example.farrelapps.pertemuan_3.ThirdResultActivity
 import com.example.farrelapps.pertemuan_4.FourthActivity
+import com.example.farrelapps.pertemuan_7.SeventhActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class MainActivity : AppCompatActivity() {
@@ -63,6 +64,10 @@ class MainActivity : AppCompatActivity() {
                     Log.e("Info Dialog","Anda memilih Tidak!")
                 }
                 .show()
+        }
+        binding.btntoseventh.setOnClickListener {
+            val intent = Intent(this, SeventhActivity::class.java)
+            startActivity(intent)
         }
     }
 }
