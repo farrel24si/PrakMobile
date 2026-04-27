@@ -6,7 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".pertemuan_7.SeventhActivity">
+    tools:context=".Home.pertemuan_7.SeventhActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar2"

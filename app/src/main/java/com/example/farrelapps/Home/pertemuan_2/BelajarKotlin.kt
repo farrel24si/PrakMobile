@@ -1,4 +1,4 @@
-package com.example.farrelapps.pertemuan_2
+package com.example.farrelapps.Home.pertemuan_2
 
 fun main() {
     println("Hai rekan rekan")

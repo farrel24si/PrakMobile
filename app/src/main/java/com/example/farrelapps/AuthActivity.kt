@@ -43,7 +43,7 @@ class AuthActivity : AppCompatActivity() {
                     editor.apply()
 
                     Toast.makeText(this, "Login berhasil", Toast.LENGTH_SHORT).show()
-                        val intent = Intent(this, MainActivity::class.java)
+                        val intent = Intent(this, BaseActivity::class.java)
                         startActivity(intent)
                         finish()
                 } else {

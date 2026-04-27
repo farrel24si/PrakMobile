@@ -6,6 +6,6 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".pertemuan_4.AfterFourthActivity">
+    tools:context=".Home.pertemuan_4.AfterFourthActivity">
 
   </androidx.constraintlayout.widget.ConstraintLayout>

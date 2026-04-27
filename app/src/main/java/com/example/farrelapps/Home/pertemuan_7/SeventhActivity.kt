@@ -1,4 +1,4 @@
-package com.example.farrelapps.pertemuan_7
+package com.example.farrelapps.Home.pertemuan_7
 
 import android.os.Bundle
 import android.view.MenuItem
@@ -8,7 +8,6 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import com.example.farrelapps.R
-import com.example.farrelapps.databinding.ActivityFourthBinding
 import com.example.farrelapps.databinding.ActivitySeventhBinding
 
 class SeventhActivity : AppCompatActivity() {

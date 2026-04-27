@@ -3,17 +3,14 @@ package com.example.farrelapps
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.edit
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.farrelapps.databinding.ActivityFourthBinding
 import com.example.farrelapps.databinding.ActivityMainBinding
-import com.example.farrelapps.pertemuan_3.ThirdResultActivity
-import com.example.farrelapps.pertemuan_4.FourthActivity
-import com.example.farrelapps.pertemuan_7.SeventhActivity
+import com.example.farrelapps.Home.pertemuan_4.FourthActivity
+import com.example.farrelapps.Home.pertemuan_7.SeventhActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class MainActivity : AppCompatActivity() {

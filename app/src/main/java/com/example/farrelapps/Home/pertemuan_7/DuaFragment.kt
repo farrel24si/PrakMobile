@@ -1,4 +1,4 @@
-package com.example.farrelapps.pertemuan_7
+package com.example.farrelapps.Home.pertemuan_7
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

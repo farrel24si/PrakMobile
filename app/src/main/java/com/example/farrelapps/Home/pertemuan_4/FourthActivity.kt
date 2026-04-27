@@ -1,4 +1,4 @@
-package com.example.farrelapps.pertemuan_4
+package com.example.farrelapps.Home.pertemuan_4
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,8 +10,6 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.farrelapps.MainActivity
 import com.example.farrelapps.R
 import com.example.farrelapps.databinding.ActivityFourthBinding
-import com.example.farrelapps.databinding.ActivityThirdBinding
-import com.example.farrelapps.pertemuan_3.ThirdResultActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 

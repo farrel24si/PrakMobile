@@ -1,4 +1,4 @@
-package com.example.farrelapps.pertemuan_5
+package com.example.farrelapps.Home.pertemuan_5
 
 import android.os.Bundle
 import android.view.View
