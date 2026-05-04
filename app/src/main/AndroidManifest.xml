@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FarrelApps">
         <activity
+            android:name=".Home.pertemuan_9.NinthActivity"
+            android:exported="false" />
+        <activity
             android:name=".BaseActivity"
             android:exported="false" />
         <activity
@@ -28,7 +31,6 @@
         <activity
             android:name=".MainActivity"
             android:exported="false" />
-
         <activity
             android:name=".Home.pertemuan_5.WebViewActivity"
             android:exported="false" />
