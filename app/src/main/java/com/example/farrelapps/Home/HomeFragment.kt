@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.edit
 import androidx.fragment.app.Fragment
 import com.example.farrelapps.AuthActivity
+import com.example.farrelapps.Home.pertemuan_10.TenthActivity
 import com.example.farrelapps.Home.pertemuan_2.SecondActivity
 import com.example.farrelapps.Home.pertemuan_3.ThirdActivity
 import com.example.farrelapps.Home.pertemuan_4.FourthActivity
@@ -78,6 +79,10 @@ class HomeFragment : Fragment() {
         // Pertemuan 9 (Latihan Material Design)
         binding.btnMenuP9.setOnClickListener {
             startActivity(Intent(requireContext(), NinthActivity::class.java))
+        }
+
+        binding.btnMenuP10.setOnClickListener {
+            startActivity(Intent(requireContext(), TenthActivity::class.java))
         }
 
         // --- LOGIKA LOGOUT ---
