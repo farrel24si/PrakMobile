@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context=".Home.pertemuan_10.TenthActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -13,6 +14,7 @@
         android:layout_height="?attr/actionBarSize"
         android:background="#0084FF"
         app:titleTextColor="@android:color/white"
+
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.tabs.TabLayout
@@ -21,6 +23,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:tabRippleColor="@color/black"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <androidx.viewpager2.widget.ViewPager2

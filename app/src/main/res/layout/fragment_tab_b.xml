@@ -10,6 +10,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+
         android:text="konten b"
         android:fontFamily="sans-serif-black"
         android:textSize="40dp"
