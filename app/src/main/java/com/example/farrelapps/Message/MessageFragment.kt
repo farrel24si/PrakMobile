@@ -1,10 +1,17 @@
 package com.example.farrelapps.Message
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.example.farrelapps.Message.Tutorial.TutorialMessageActivity
+import com.example.farrelapps.R
 import com.example.farrelapps.databinding.FragmentMessageBinding
 
 class MessageFragment : Fragment() {
@@ -41,8 +48,35 @@ class MessageFragment : Fragment() {
         // Memanggil Custom Adapter yang sudah kita buat sebelumnya
         val adapter = MessageAdapter(requireContext(), messageList)
 
+        (requireActivity() as AppCompatActivity).setSupportActionBar(binding.toolbar)
+        (requireActivity() as AppCompatActivity).supportActionBar?.apply {
+            title = "Message"
+        } // 1. PERBAIKAN: Menambahkan kurung kurawal tutup di sini
+
         // Memasang adapter ke ListView
         binding.listMessageItems.adapter = adapter
+
+        // Mengaktifkan opsi menu di Toolbar Fragment
+        @Suppress("DEPRECATION")
+        setHasOptionsMenu(true)
+    } // 2. PERBAIKAN: Menutup fungsi onViewCreated di sini
+
+    @Deprecated("Deprecated in Java")
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.message_toolbar_menu, menu)
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    @Deprecated("Deprecated in Java")
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_tutorial -> {
+                val intent = Intent(requireContext(), TutorialMessageActivity::class.java)
+                startActivity(intent)
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 
     override fun onDestroyView() {
