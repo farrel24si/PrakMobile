@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import com.example.farrelapps.Home.HomeFragment
 import com.example.farrelapps.Message.MessageFragment
 import com.example.farrelapps.More.MoreFragment
+import com.example.farrelapps.Note.NoteFragment // Pastikan import ini ada
 import com.example.farrelapps.databinding.ActivityBaseBinding
 
 class BaseActivity : AppCompatActivity() {
@@ -22,8 +23,6 @@ class BaseActivity : AppCompatActivity() {
         binding = ActivityBaseBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Perbaikan: Pastikan ID 'main' ada di layout activity_base.xml kamu
-        // Jika tidak ada, ganti findViewById(R.id.main) menjadi binding.root
         ViewCompat.setOnApplyWindowInsetsListener(binding.root) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, 0)
@@ -37,12 +36,17 @@ class BaseActivity : AppCompatActivity() {
 
         binding.bottomNavView.setOnItemSelectedListener {
             when (it.itemId) {
-                R.id.home -> { // Sesuaikan ID dengan bottom_nav_menu.xml
+                R.id.home -> {
                     replaceFragment(HomeFragment())
                     true
                 }
-                R.id.message -> { // Ini akan memanggil ListView Modul 9 kamu
+                R.id.message -> {
                     replaceFragment(MessageFragment())
+                    true
+                }
+                // Tambahkan aksi untuk Note
+                R.id.note -> {
+                    replaceFragment(NoteFragment())
                     true
                 }
                 R.id.more -> {

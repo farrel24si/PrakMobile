@@ -11,6 +11,11 @@
         android:title="Message" />
 
     <item
+        android:id="@+id/note"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="Note" />
+
+    <item
         android:id="@+id/more"
         android:icon="@drawable/ic_more"
         android:title="More" />
