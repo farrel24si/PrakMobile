@@ -45,7 +45,7 @@ class ThirteenthActivity : AppCompatActivity() {
                 0 -> {
                     tab.text = "Tab Capture"
                     //Tambah Icon
-                    tab.icon = ContextCompat.getDrawable(  this, R.drawable.ic_home)
+                    tab.icon = ContextCompat.getDrawable(  this, R.drawable.ic_camera)
                     //Tambah Badge Tanpa nomor (hanya titik)
                     val badge = tab.getOrCreateBadge()
                     badge.isVisible = true
@@ -53,7 +53,7 @@ class ThirteenthActivity : AppCompatActivity() {
                 1 -> {
                     tab.text = "Tab QR Code"
                     //Tambah Icon
-                    tab.icon = ContextCompat.getDrawable(  this, R.drawable.ic_home)
+                    tab.icon = ContextCompat.getDrawable(  this, R.drawable.ic_qrcode)
                     //Tambah Badge dengan nomor
                     val badge = tab.getOrCreateBadge()
                     badge.isVisible = true
@@ -62,7 +62,7 @@ class ThirteenthActivity : AppCompatActivity() {
                 2 -> {
                     tab.text = "Tab Scan"
                     //Tambah Icon
-                    tab.icon = ContextCompat.getDrawable(  this, R.drawable.ic_home)
+                    tab.icon = ContextCompat.getDrawable(  this, R.drawable.ic_scanqr)
                     //Tambah Badge dengan nomor
                     val badge = tab.getOrCreateBadge()
                     badge.isVisible = true

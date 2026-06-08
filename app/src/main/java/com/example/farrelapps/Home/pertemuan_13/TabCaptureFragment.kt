@@ -78,7 +78,7 @@ class TabCaptureFragment : Fragment() {
 
     private fun openCamera() {
         val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-        if (intent.resolveActivity(requireContext().packageManager) != null) {
+
 
             //generate alamat tempat penyimpanan dan nama foto
             currentPhotoUri = createGalleryPhotoUri()
@@ -86,7 +86,7 @@ class TabCaptureFragment : Fragment() {
             intent.putExtra(MediaStore.EXTRA_OUTPUT, currentPhotoUri)
             cameraLauncher.launch(intent)
         }
-    }
+
 
     private fun createGalleryPhotoUri(): Uri {
         val folderName = "TestCaptures"
