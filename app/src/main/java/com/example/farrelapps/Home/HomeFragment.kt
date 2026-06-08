@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.example.farrelapps.AuthActivity
 import com.example.farrelapps.Home.pertemuan_10.TenthActivity
+import com.example.farrelapps.Home.pertemuan_13.ThirteenthActivity
 import com.example.farrelapps.Home.pertemuan_2.SecondActivity
 import com.example.farrelapps.Home.pertemuan_3.ThirdActivity
 import com.example.farrelapps.Home.pertemuan_4.FourthActivity
@@ -82,6 +83,11 @@ class HomeFragment : Fragment() {
         binding.btnMenuP10.setOnClickListener {
             startActivity(Intent(requireContext(), TenthActivity::class.java))
         }
+
+        binding.btnMenuP13.setOnClickListener {
+            startActivity(Intent(requireContext(), ThirteenthActivity::class.java))
+        }
+
         binding.btnRefresh.setOnClickListener {
             loadCatFact()
         }
