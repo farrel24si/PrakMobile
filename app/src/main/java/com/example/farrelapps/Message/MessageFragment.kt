@@ -17,7 +17,9 @@ import com.example.farrelapps.databinding.FragmentMessageBinding
 class MessageFragment : Fragment() {
 
     private var _binding: FragmentMessageBinding? = null
+
     private val binding get() = _binding!!
+
 
     // Mendefinisikan list data sesuai instruksi Modul 9
     private val messageList = listOf(
@@ -74,7 +76,9 @@ class MessageFragment : Fragment() {
                 val intent = Intent(requireContext(), TutorialMessageActivity::class.java)
                 startActivity(intent)
                 true
+
             }
+
             else -> super.onOptionsItemSelected(item)
         }
     }

@@ -1,17 +1,30 @@
 package com.example.farrelapps.Home.pertemuan_9
 
+import android.Manifest
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.farrelapps.databinding.ActivityNinthBinding
+import com.example.farrelapps.utils.NotificationHelper
+import com.example.farrelapps.utils.PermissionHelper
 import com.google.android.material.chip.Chip
 
 class NinthActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityNinthBinding
+
+    private val notificationPermissionLauncher =
+        registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted ->
+            if (isGranted) {
+                Toast.makeText(this, "Notifikasi diizinkan", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "Notifikasi ditolak", Toast.LENGTH_SHORT).show()
+            }
+        }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +38,16 @@ class NinthActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+        if (PermissionHelper.isNotificationPermissionRequired()) {
+            val permission = Manifest.permission.POST_NOTIFICATIONS
+            if (!PermissionHelper.hasPermission(this, permission)) {
+                PermissionHelper.requestPermission(
+                    notificationPermissionLauncher,
+                    permission
+                )
+            }
         }
 
         setSupportActionBar(binding.toolbar)
@@ -72,7 +95,15 @@ class NinthActivity : AppCompatActivity() {
             // Jika semua form terisi
             if (isValid) {
                 Toast.makeText(this, "Berhasil! Email: $email, No HP: $phone", Toast.LENGTH_LONG).show()
+
             }
+
+            NotificationHelper.showNotification(
+                this, //Jika panggil di fragment maka requireContext()
+                "email Anda",
+                "Halo $email, email anda tersimpan",
+                intent
+            )
+        }
         }
     }
-}
